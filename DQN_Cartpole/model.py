@@ -5,6 +5,7 @@ import torch.nn.functional as F
 # M: network is trying to predict the expected return of taking each action given the current input
 class DQN(nn.Module):
 
+    # M: policy net: in state: from 4 observations, out 2 (return of q value from action 1 or 2)
     def __init__(self, n_observations, n_actions):
         super(DQN, self).__init__()
         self.layer1 = nn.Linear(n_observations, 128)
@@ -16,4 +17,5 @@ class DQN(nn.Module):
     def forward(self, x):
         x = F.relu(self.layer1(x))
         x = F.relu(self.layer2(x))
-        return self.layer3(x)
+        res = self.layer3(x)
+        return res
