@@ -16,7 +16,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # M: Action Space: (3,)
 # M: Observation Space: (6,)
 # M: Reward: -1 for each step, when reaching goal target height (-cos(theta1) - cos(theta2 + theta1) > 1.0): 0, Threshold -100
-env = gym.make("Acrobot-v1") # Acrobot-v1, CartPole-v1
+env = gym.make("CartPole-v1") # Acrobot-v1, CartPole-v1
 env.reset()
 next_state, reward, done, trunc, info = env.step(action=0)
 print(f"Observation Space: {next_state.shape}, \n Action Space: {env.action_space.n}, \n Reward: {reward},\n Truncated: {done},\n Info: {info}")
