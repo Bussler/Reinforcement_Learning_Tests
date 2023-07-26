@@ -5,7 +5,7 @@ from itertools import count
 
 
 #CHECKPOINT_PATH = "DQN_Implementation\checkpoints/2023-07-21T15-37-16/acrobot_dqn_10.chkpt"
-CHECKPOINT_PATH = "DQN_Implementation/checkpoints/2023-07-23T16-26-34/acrobot_dqn_3.chkpt"
+CHECKPOINT_PATH = "checkpoints/2023-07-23T16-26-34/acrobot_dqn_3.chkpt"
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
