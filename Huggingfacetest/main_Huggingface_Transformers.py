@@ -8,6 +8,7 @@ def data():
 
 generator = pipeline('text-generation', model='gpt2')
 
+
 out = generator("Hello,")
 print(out)
 

@@ -32,7 +32,6 @@ class OUNoise(object):
         return np.clip(action + ou_state, self.low, self.high)
 
 
-# TODO try other action normalization methods: e.g. RescaleAction
 # https://github.com/openai/gym/blob/master/gym/core.py
 class NormalizedEnv(gym.ActionWrapper):
     """ Wrap action """
