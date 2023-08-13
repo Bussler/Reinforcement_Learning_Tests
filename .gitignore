@@ -153,3 +153,4 @@ cython_debug/
 
 *checkpoints/
 *runs/
+*chroma_db/
